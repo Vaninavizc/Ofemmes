@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 
-h1, h4, header a {
+h1, h2, h4, header a {
 	font-family: 'Amatic SC', cursive;
 	font-weight: normal;
 }
@@ -9,4 +9,9 @@ h1, h4, header a {
 h2 {
 	font-family: 'Great Vibes', cursive;
 	font-weight: normal;
+}
+
+header a {
+	font-size: 32px;
+	color: #B551A1;
 }

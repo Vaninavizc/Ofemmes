@@ -10,9 +10,13 @@
 <div class="row">
     <% @arts.each do |art| %>
       <div class="col-md-3">
+        <h3>
         <%= image_tag art.image, class: 'img-fluid' %>
         <td><%= art.title %></td>
+        </h3>
+        <h4>
         <td><%= art.date %></td>
+        </h4>
         <td><%= simple_format art.description%></td>
         <td class="btn btn-default"><%= link_to 'Afficher', art %></td>
         <td class="btn btn-default"><%= link_to 'Editer', edit_art_path(art) %></td>

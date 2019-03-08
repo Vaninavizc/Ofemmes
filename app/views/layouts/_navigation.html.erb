@@ -5,6 +5,14 @@
 	<br>
 	<nav>
 		<%=link_to 'Say hello to feminism', arts_path %>
-		
+
 	</nav>
+	<nav>
+		<% Continent.all.each do |continent| %>
+			<%= link_to continent, continent %>
+
+		<% end %>
+	</nav>
+
+
 </header>

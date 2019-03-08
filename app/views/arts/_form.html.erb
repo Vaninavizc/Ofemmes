@@ -31,6 +31,10 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.select :continent_id, Continent.all.map {|continent| [continent.title, continent.id]}%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

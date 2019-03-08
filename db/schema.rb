@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_06_201948) do
+ActiveRecord::Schema.define(version: 2019_03_08_094255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,22 +22,15 @@ ActiveRecord::Schema.define(version: 2019_03_06_201948) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "continent_id"
+    t.index ["continent_id"], name: "index_arts_on_continent_id"
   end
 
-  create_table "authors", force: :cascade do |t|
-    t.text "first_name"
-    t.text "last_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "works", force: :cascade do |t|
+  create_table "continents", force: :cascade do |t|
     t.string "title"
-    t.date "date"
-    t.text "image"
-    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "arts", "continents"
 end

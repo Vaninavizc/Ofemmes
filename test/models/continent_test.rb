@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WorkTest < ActiveSupport::TestCase
+class ContinentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
